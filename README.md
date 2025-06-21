@@ -25,3 +25,15 @@ The **Airbnb Clone Project** is a comprehensive, real-world application designed
  - **Docker**: Containerization tool for consistent development and deployment environments.
  - **CI/CD Pipelines**: Automated pipelines for testing and deploying code changes.
 
+## Team Roles
+This project leverages a collaborative team structure, with each role playing a crucial part in the successful delivery of the Airbnb Clone backend:
+
+* **Backend Developer:**
+    * **Responsibilities:** Responsible for designing, implementing, and maintaining the core logic of the application. This includes developing API endpoints (using Django and Django REST Framework), integrating with the database (PostgreSQL), implementing business logic for user, property, booking, payment, and review management, and ensuring the overall performance and scalability of the backend services. They also work with GraphQL for flexible data querying and integrate asynchronous tasks with Celery.
+* **Database Administrator (DBA):**
+    * **Responsibilities:** Focused on the design, implementation, and maintenance of the PostgreSQL database. Key tasks include creating efficient database schemas, implementing indexing strategies for data optimization, managing data integrity, ensuring data security, and planning caching mechanisms using Redis to improve performance and reduce database load.
+* **DevOps Engineer:**
+    * **Responsibilities:** Manages the development and deployment pipeline. This includes setting up and maintaining the CI/CD pipelines (e.g., using GitHub Actions), containerizing applications with Docker for consistent environments, automating testing and deployment processes, monitoring system performance, and ensuring the scalability and reliability of the backend services in production.
+* **QA Engineer (Quality Assurance Engineer):**
+    * **Responsibilities:** Ensures the overall quality and reliability of the backend system. This involves designing and executing test plans, creating automated tests for API endpoints (REST and GraphQL), identifying and documenting bugs, verifying bug fixes, and collaborating closely with backend developers to ensure that all functionalities meet the defined requirements and quality standards.
+
