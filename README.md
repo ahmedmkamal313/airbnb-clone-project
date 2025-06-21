@@ -69,3 +69,21 @@ The database is structured to efficiently manage the core entities of the Airbnb
     * A property can have multiple reviews (Property ⟷ Reviews).
 * **One-to-One:**
     * A payment is associated with one booking (Payment ⟷ Booking).
+ 
+## Feature Breakdown
+This section outlines the primary features implemented in the Airbnb Clone backend, detailing their role in delivering a robust and functional booking platform:
+
+* **API Documentation:**
+    * Utilizes the OpenAPI standard for REST APIs and provides a GraphQL endpoint. This ensures clear, comprehensive documentation, making it easy for frontend developers or other services to understand and integrate with the backend's functionalities.
+* **User Management:**
+    * Encompasses secure user registration, authentication (login/logout), and profile management functionalities. This feature is fundamental for enabling users to interact with the platform, whether as hosts listing properties or guests making bookings.
+* **Property Management:**
+    * Allows users to create, view, update, and delete property listings. It is crucial for hosts to effectively manage their properties and for guests to browse and discover available accommodations.
+* **Booking System:**
+    * Provides the core mechanism for users to reserve properties, manage their booking details (like check-in/check-out dates), and view booking history. This feature simulates the central transaction process of a booking platform.
+* **Payment Processing:**
+    * Handles secure transactions related to bookings, including payment initiation and recording payment details. This is vital for monetizing the platform and ensuring secure financial operations between guests and hosts.
+* **Review System:**
+    * Enables users to submit and manage reviews and ratings for properties they have experienced. This feature fosters community trust and provides valuable feedback for both hosts and prospective guests.
+* **Database Optimizations:**
+    * Involves implementing strategies like indexing and caching (with Redis) to ensure efficient data retrieval and storage. These optimizations are critical for maintaining high performance and responsiveness as the application scales with more users and data.
