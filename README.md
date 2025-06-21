@@ -38,3 +38,34 @@ This project leverages a collaborative team structure, with each role playing a 
     * **Responsibilities:** Manages the development and deployment pipeline. This includes setting up and maintaining the CI/CD pipelines (e.g., using GitHub Actions), containerizing applications with Docker for consistent environments, automating testing and deployment processes, monitoring system performance, and ensuring the scalability and reliability of the backend services in production.
 * **QA Engineer (Quality Assurance Engineer):**
     * **Responsibilities:** Ensures the overall quality and reliability of the backend system. This involves designing and executing test plans, creating automated tests for API endpoints (REST and GraphQL), identifying and documenting bugs, verifying bug fixes, and collaborating closely with backend developers to ensure that all functionalities meet the defined requirements and quality standards.
+ 
+---
+
+## Database Design
+The database is structured to efficiently manage the core entities of the Airbnb Clone application. Key entities and their relationships are outlined below:
+
+* **Users**
+    * **Fields:** `user_id` (Primary Key), `username`, `email`, `password_hash`, `registration_date`.
+    * **Description:** Stores user information. Users can list multiple properties and make multiple bookings.
+* **Properties**
+    * **Fields:** `property_id` (Primary Key), `title`, `description`, `location`, `price_per_night`.
+    * **Description:** Stores property details. Each property is listed by one user and can have multiple bookings and reviews.
+* **Bookings**
+    * **Fields:** `booking_id` (Primary Key), `user_id` (Foreign Key), `property_id` (Foreign Key), `check_in_date`, `check_out_date`.
+    * **Description:** Records booking information. Each booking belongs to one user and one property.
+* **Reviews**
+    * **Fields:** `review_id` (Primary Key), `user_id` (Foreign Key), `property_id` (Foreign Key), `rating`, `comment`.
+    * **Description:** Stores reviews for properties. Each review is written by one user for one property.
+* **Payments**
+    * **Fields:** `payment_id` (Primary Key), `booking_id` (Foreign Key), `payment_date`, `amount`, `payment_method`.
+    * **Description:** Manages payment records. Each payment is associated with one booking.
+
+**Relationships:**
+
+* **One-to-Many:**
+    * A user can have multiple properties (User ⟷ Properties).
+    * A user can make multiple bookings (User ⟷ Bookings).
+    * A property can have multiple bookings (Property ⟷ Bookings).
+    * A property can have multiple reviews (Property ⟷ Reviews).
+* **One-to-One:**
+    * A payment is associated with one booking (Payment ⟷ Booking).
